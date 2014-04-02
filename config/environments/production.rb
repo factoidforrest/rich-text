@@ -77,13 +77,13 @@ RichText::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  #Paperclip::Attachment.default_options[:url] = 'rich-text-stage.s3-website-us-west-2.amazonaws.com'
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
       :bucket => ENV['BUCKET'],
-      #key should actually be in env
-      :access_key_id => ENV['KEYID'],
-      :secret_access_key => ENV['S3KEY']
+      :access_key_id => ENV['S3_KEY'],
+      :secret_access_key => ENV['S3_SECRET']
     }
   }
 end
