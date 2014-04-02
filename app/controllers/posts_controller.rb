@@ -17,10 +17,6 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def edit
-  end
-
-  def destroy
-  end
+]
 
 end

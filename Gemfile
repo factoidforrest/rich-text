@@ -5,7 +5,8 @@ gem 'rails', '4.0.2'
 gem 'paperclip', '~> 4.1.0'
 gem 'ckeditor'
 gem 'non-stupid-digest-assets', '~> 1.0.4'
-gem 'protected_attributes'
+#gem 'protected_attributes'
+gem 'aws-sdk'
 
 group :development do
 	gem 'pry'
