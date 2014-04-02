@@ -17,6 +17,6 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-]
+
 
 end
