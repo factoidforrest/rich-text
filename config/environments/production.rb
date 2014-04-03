@@ -78,11 +78,15 @@ config.assets.compile = true
   config.log_formatter = ::Logger::Formatter.new
   #Paperclip::Attachment.default_options[:url] = 'rich-text-stage.s3-website-us-west-2.amazonaws.com'
   config.paperclip_defaults = {
+    :path => "ckeditor_assets/attachments/:id/:filename",
+    #:url => "/ckeditor_assets/attachments/:id/:filename",
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['BUCKET'],
-      :access_key_id => ENV['S3_KEY'],
-      :secret_access_key => ENV['S3_SECRET']
+
+      #:host_name => 's3-us-west-2.amazonaws.com',
+      :bucket => ENV['BUCKET'] || 'rich-text-stage.s3-us-west-2.amazonaws.com',
+      :access_key_id => ENV['S3_KEY'] || 'AKIAJUK42NK24QZDCMJQ',
+      :secret_access_key => ENV['S3_SECRET'] || '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'
     }
   }
 end
