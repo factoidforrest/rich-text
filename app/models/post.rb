@@ -1,4 +1,4 @@
 class Post < ActiveRecord::Base
-	attr_accessible :title
-	attr_accessible :body
+	#attr_accessible :title
+	#attr_accessible :body
 end

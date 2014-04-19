@@ -6,11 +6,12 @@ gem 'rails', '~> 4'
 gem 'paperclip', '~> 4.1.0'
 gem 'ckeditor'
 gem 'non-stupid-digest-assets', '~> 1.0.4'
-gem 'protected_attributes'
 gem 'aws-sdk'
 
 group :development do
 	gem 'pry'
+	gem 'rspec-rails'
+	gem 'capybara'
 end
 # Use sqlite3 as the database for Active Record
 gem 'pg'

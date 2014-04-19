@@ -4,8 +4,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = params[:post]
-    @post = Post.new(post)
+    @post = Post.new(post_params)
     if @post.save
       redirect_to posts_path, notice: "The post has been successfully created."
     else
@@ -18,5 +17,10 @@ class PostsController < ApplicationController
   end
 
 
+  private
+  def post_params
+    p "attempting to read params " + params.to_s
+    params.require(:post).permit(:title, :body)
+  end
 
 end
